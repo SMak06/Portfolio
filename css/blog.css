@@ -1,3 +1,10 @@
+.Header{
+  background: url(../head.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 2px 20px 0px rgba(25,25,30,0.5);
+  margin: 20px;
+}
 .con{
   padding: 5%;
   box-shadow: 0px 2px 16px 0px rgba(204,204,204,1);
@@ -9,26 +16,33 @@ p, span{font-family: 'Roboto', sans-serif; color:#323142;}
   color: black;
   background: #ffb7b7;
 }
-
 ::selection {
   color: black;
   background: #ffb7b7;
 }
 .H-top1{
   font-family: 'Poppins', sans-serif;
+  font-weight: bold;
   font-size: 10vw;
   text-align: center;
-  color: #263238;
+  color: #fff;
+  text-shadow: -1px 4px 16px rgba(50,50,50,0.5);
 }
+.H-g{color:#fff;}
 .H-top2{
   letter-spacing: 10px;
   font-family: 'Poppins', sans-serif;
   text-align: center;
   font-size: 13vh;
   color: #ff1744;
+  text-shadow: -1px 4px 16px rgba(50,50,50,0.5);
+}
+.nav-link a{
+  color: #ff1744;
 }
 .nav-link a:hover{
   text-decoration: none;
+  text-shadow: -1px 4px 16px rgba(50,50,50,0.3);
   color:black;
 }
 .comment{
@@ -108,4 +122,7 @@ and (max-device-width : 980px) {
     font-size: 11vw;
     color: #323142;
   }
+}
+.birk{
+  width: 75%;
 }
