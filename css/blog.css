@@ -158,3 +158,73 @@ and (max-device-width : 980px) {
   color: white;
   background-color:#f7281d;
 }
+.btn-only{
+  color: white !important;
+  transform: scale(0.7);
+}
+.btn-large{
+  background-color: #ff1744 !important;
+}
+.b-one{
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    }
+}
+.b-two{
+  background-color: black !important;
+}
+.b-two{
+  background-color:	#3b5998 !important;
+}
+.b-three{
+  background-color: #f94c36 !important;
+}
+.b-four{
+  background-color: #00aced !important;
+}
+.b-five{
+  background-color: #4875B4 !important;
+}
+.btn-yo > .fab, .far{
+  transform: scale(0.7);
+}
+#I1{
+  transform: scale(0.7);
+}
+#G1{
+  transform: scale(0.7);
+}
+#L1{
+  transform: scale(0.7);
+}
+#F1{
+  transform: scale(0.7);
+}
+#T1{
+  transform: scale(0.7);
+}
+
+.f-icons{
+  color: white;
+  text-align: center;
+}
+.f-copyright{
+  color: white !important;
+}
+.f-copyright:hover{
+  color: #dbdbdb !important;
+  text-decoration: none;
+}
+.f-icons i{
+  padding: 0 30px;
+}
+.foot-l{
+  color: white;
+}
+.foot-l:hover{
+  text-decoration: none;
+  transform: scale(1.05);
+}
