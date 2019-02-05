@@ -113,6 +113,9 @@ and (max-device-width : 480px) {
     font-size: 12vw;
     color: #323142;
   }
+  .foot-l{
+    transform: scale(0.8);
+  }
 }
 @media only screen
 and (min-device-width : 481px)
@@ -131,6 +134,9 @@ and (max-device-width : 980px) {
   .topic{
     font-size: 11vw;
     color: #323142;
+  }
+  .foot-l{
+    transform: scale(0.8);
   }
 }
 .birk{
@@ -219,7 +225,7 @@ and (max-device-width : 980px) {
   text-decoration: none;
 }
 .f-icons i{
-  padding: 0 30px;
+  padding: 0 0.3em;
 }
 .foot-l{
   color: white;
