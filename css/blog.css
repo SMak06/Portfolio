@@ -251,3 +251,10 @@ and (max-device-width : 980px) {
   width: 45%;
   padding: 20px;
 }
+.btn-blog{
+  background-color: #ff1744 !important;
+  box-shadow: 0px 2px 16px 0px rgba(204,204,204,1) !important;
+}
+.btn-blog:hover{
+  box-shadow: 0px 5px 10px 0px rgba(204,204,204,1) !important;
+}
