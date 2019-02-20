@@ -46,7 +46,7 @@ p, span{font-family: 'Roboto', sans-serif; color:#323142;}
 }
 .nav-link a:hover{
   text-decoration: none;
-  text-shadow: -1px 4px 16px rgba(50,50,50,0.3);
+  text-shadow: -1px 3px 10px rgba(50,50,50,0.2);
   color:black;
 }
 .comment{
