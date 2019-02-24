@@ -1,7 +1,7 @@
 # Portfolio
 # This would be my Portfolio/Resume website in the future.  
 
-This website is subject to a lot of changes. A LOT. So, bear with me whilst I develop with. 
+This website is subject to a lot of changes. A LOT. So, bear with me whilst I develop this. 
 
 One of the major blogs for the website describing the 3 Continent program is up and running but again is not fully complete as my program hasn't even reached the half way. Although, I have addressed most of the major things that I believe are important. 
 
