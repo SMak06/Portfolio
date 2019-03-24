@@ -1,5 +1,6 @@
 body{
-	background: url(../crimson.jpg)
+	/* background: url(../crimson.jpg); */
+	background: url(../black.jpg);
 }
 .borda{
 	animation-name: dash;
