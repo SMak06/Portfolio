@@ -1,93 +1,527 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxygen" rel="stylesheet">
-  <title>Coming Soon</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Portfolio | Sahil Makwane</title>
+
+    <!-- favicon -->
+    <link href="favicon.png" rel=icon>
+
+    <!-- web-fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-  <div class="borda" style="text-align: center; position: fixed; top: 50%;left: 50%;transform: translate(-50%, -50%);">
-    <object>
-      <embed class="sign" src="sign.png">
-    </object>
-    <div id="myCarousel" class="carousel slide top-to-bottom" data-ride="carousel" data-interval="3000">
-      <div class="carousel-inner" id="quotes">
-         <div class="active carousel-item"><p class="quote">Work In Progress, will launch before CP-2077 does</p></div>
-         <div class="carousel-item"><p class="quote">Men at Work, <span><a href="https://www.youtube.com/watch?v=XfR9iY5y94s" style="color: #42f44e !important;">Down Under</a></span></p></div>
-         <div class="carousel-item"><p class="quote">Sponsored by <span><a href="http://www.piedpiper.com/" style="color: #42f44e !important;">Pied Piper</a></span> & <span><a href="https://www.hooli.xyz/" style="color: #42f44e !important;">Hooli</a></span></p></div>
-      </div>
+<body id="page-top" data-spy="scroll" data-target=".navbar">
+<div id="main-wrapper">
+<!-- Page Preloader -->
+<div id="preloader">
+    <div id="status">
+        <div class="status-mes"></div>
     </div>
-    <!-- <a href="blog.html"><button type="button" class="btn btn-outline-light">BLOG</button></a> -->
-  </div>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-<!--                         ..sSs$$$$$$b.
-                       .$$$$$$$$$$$$$$$.
-                    .$$$$$$$$$$$$$$$$$$$$$b.
-                  .$$$$$$$$$$$$$$$$$$$$$$$$$
-                 $$$$$$$$$$$$$$$$$S'   `$$$$
-                 $$$$$$$$$$$$$$S'        $$$
-                 $$$$$$$$$$$$$'          `$$.
-                 `$$$$$$$$$$$$$           `$$$.
-                   `$$$$$$$$$'       .s$$$ $$ $
-                     $$$$$$$$$.sSs .s$$s"   s s
-                      $$$$$$$$$$$$           $P
-                      `$$$$$$$$$$$s          $
-                        $$$$$$$$$$$.    ",
-                        `$$$$$$$$$$sS$
-        s$$$.            `$$$$$$$$$$$$.s"'   .$.
-        $$$$$.              `$$$$$$$$$$.    .$$$Ss.s$s.
-         $$$$$.              `$$$$$$$$$P   .$$$$$$$$$$$$.
-         $$$$$$.               `$$$$$$$' .$$$$$$$$$$$$$$$$.
-         `$$$$$$.                 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$s.
-           $$$$$$.                `$$$$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$s.
-         .s$$$$$$$.                 `$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$.
-         s  $$$$$$$.                .$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$.
-         `$$$$$$$$$$.             .$$$' $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$.
-          `$$$$$$$$$$.           s$'   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$.
-          $$$$$$$$$$$$e         $$$     `$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-        .' $$$$$$$$$$7         $$$$       `$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-       "   `$$$$$$$$7         $$$$$       .$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-      $$Ss..$$$$$$$7        $$$$$$$    .s$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-       $$$$$$$$$$$$        $$$$$$$$ .s$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-        $$$$$$$$$$$     .$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-      .$$$$$$$$$$$$$   .$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-      $$$$$$$$$$$$$$  .$$$$$$$$$$$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-      $$$$$$$$$$$$$$ .$$$$$$$$$$$' `$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-      $$$$$$$$$$$$$$ $$$$$$$$$$$$   `$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-      $$$$$$$$$$$$$$$$$$$$$$$$$$$    `$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-      `$$$$$$$$$$$$$$$$$$$$$$$$$$     `$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-       $$$$$$$$$$$$$$$$$$$$$$$$$$.     $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-       `$$$$$$$$$$$$$$$$$$$$$$$$$$     `$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-         $$$$$$$$$$$$$$$$$$$$$$$$$      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-          $$$$$$$$$$$$$$$$$$$$$$$$      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-           $$$$$$$$$$ $$$$$$$$$$$$      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-            $$$$$$$$$$$$$$$$$$$$$$      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-             $$$$$$$$$$$$$$$$$$$$'      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-             `$$$$$$$$$$$$$$$$$$$       $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-              `$$$$$$$$$$$$$$$$$$.      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-               `$$$$$$$$$$$$$$$$$$      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-                 $$$$$$$$$$$$$$$$$.     $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-                  `$$$$$$$$$$$$$$$$     $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-                    $$$$$$$$$$$$$$$     `$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-                    $$$$$$$$$$$$$$$      $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-$    q$P    $$$'  `$$$   $$   $$$$$      `$$$$'  `$$$   $   $$   q$   $     $
-$     $     $$'    `$$   qp   $$$$$   $b  `$$'    `$$.  $  .$$    q   $   $$$
-$     '     $'  db  `$.      .$$$$$   $P  .$'  db  `$$     $$$        $   $$$
-$           $   $$   $$s    s$$$$$$      .$$   $$   $$.   .$$$        $     $
-$   b   d   $   $$   $'      `$$$$$   $$$$$$   $$   $$$   $$$$        $   $$$
-$   $   $   $        $   db   $$$$$   $$$$$$        $$$   $$$$   b    $   $$$
-$   $. .$   $   $$   $   $$   $$$$$   $$$$$$   $$   $$$   $$$$   $b   $     $
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ dp $-->
+</div>
+
+<div class="columns-block">
+<div class="left-col-block blocks">
+    <header class="header">
+        <div class="content text-center">
+            <h1>Hi, I'm Sahil Makwane!</h1>
+
+            <p class="lead"></p>
+            <ul class="social-icon">
+                <!-- <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
+                <!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+                <li><a href="https://www.github.com/SMak06"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/sahil-makwane-a2808a113/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/s_makwayne"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <!-- <li><a href="#"><i class="fa fa-slack" aria-hidden="true"></i></a></li> -->
+                <!-- <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li> -->
+            </ul>
+        </div>
+        <div class="profile-img"></div>
+    </header>
+    <!-- .header-->
+</div>
+
+
+<div class="right-col-block blocks">
+<!-- ABOUT ME -->
+<section class="intro section-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2>About me.</h2>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <p>
+                    I'm a junior at Amity University Noida, majoring in Computer Science and I'm passionate about Machine Learning and Blockchain.
+
+                </p>
+
+                <p>
+                    I recently did two study abroad programs which took place in London and New York for 3 months respectively wherein I attended a lot of events, met quite a bunch of professionals from various fields as well as attended lectures at two renown universities. Recently my interest piqued in Hackathons, I won my first one in London at King's college following which I won the Samsung award at the MIT GrandHack 2019.
+                </p>
+                <p>
+                  I like designing and have been glued to web development for a while now.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--WORK EX -->
+<section class="section-wrapper section-experience gray-bg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title"><h2>Work Experience</h2></div>
+            </div>
+        </div>
+        <!--.row-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content-item">
+                    <small>March 2018 - Present</small>
+                    <h3>Web Developer</h3>
+                    <h4>MACK Studios</h4>
+
+                    <!-- <p>New Delhi, India</p> -->
+                    <p>A startup in New Delhi, India, offering an array of digital services. I design websites for their
+clients. I also design website templates.</p>
+                </div>
+                <!-- .experience-item -->
+                <div class="content-item">
+                    <small>January 2018 - Present</small>
+                    <h3>Graphic Designer</h3>
+                    <h4>Polemics & Pedantics</h4>
+
+                    <!-- <p>United Kingdom, London</p> -->
+                    <p>A digital magazine which provides analysis on important issues of the world. I
+design their magazine issue covers as well as their graphic content. I also helped design their website.</p>
+                </div>
+                <!-- .experience-item -->
+                <div class="content-item">
+                    <small>March 2019 - April 2019 (2 months)</small>
+                    <h3>Intern, Machine Learning</h3>
+                    <h4>ADLA</h4>
+
+                    <!-- <p>United Kingdom, London</p> -->
+                    <p>A startup in London, UK, aiming to redesign the recommender system while shopping for clothes online. I learnt to make ML models and helped design NLP models (using word2vec)</p>
+                </div>
+                <!-- .experience-item -->
+            </div>
+        </div>
+        <!--.row-->
+    </div>
+    <!-- .container-fluid -->
+
+</section>
+<!-- .section-experience -->
+
+<section class="section-wrapper section-education">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title"><h2>Education</h2></div>
+            </div>
+        </div>
+        <!--.row-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content-item">
+                    <small>2016-2020</small>
+                    <h3>BTech Computer Science - 3 Continent Program</h3>
+                    <h4>Amity University Noida, Uttar Pradesh</h4>
+
+                    <p>Uttar Pradesh, India</p>
+                </div>
+                <!-- .experience-item -->
+                <div class="content-item">
+                    <small>April 2019 - June 2019</small>
+                    <h3>Study Abroad Program</h3>
+                    <h4>Adelphi University, New York</h4>
+
+                    <p>Garden City, New York, United States of America</p>
+                </div>
+                <!-- .experience-item -->
+                <div class="content-item">
+                    <small>January 2019 - March 2019</small>
+                    <h3>Study Abroad Program</h3>
+                    <h4>Birkbeck Univeristy, London</h4>
+
+                    <p>London, United Kingdom</p>
+                </div>
+                <!-- .experience-item -->
+            </div>
+        </div>
+        <!--.row-->
+    </div>
+    <!-- .container-fluid -->
+
+</section>
+<!-- .section-education -->
+
+<section class="section-wrapper portfolio-section gray-bg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2>Achievements</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a class="portfolio-item" href="img/rsk cert.png">
+                    <div class="portfolio-thumb">
+                        <img src="img/achievement-1.png" alt="">
+                    </div>
+
+                    <div class="portfolio-info overlay">
+                        <center><h2 class="img-text" style="color:white;">Won RSK Hackathon</h2></center>
+                    </div>
+                    <!-- portfolio-info -->
+                </a>
+                <!-- .portfolio-item -->
+            </div>
+            <div class="col-md-6">
+                <a class="portfolio-item" href="#">
+                    <div class="portfolio-thumb">
+                        <img src="img/achievement-2.jpg" alt="">
+                    </div>
+
+                    <div class="portfolio-info">
+                        <center><h2 style="color:white">Won Samsung Award at MIT Grand Hack</h2></center>
+                        <!-- <small>domain.com</small> -->
+                    </div>
+                    <!-- portfolio-info -->
+                </a>
+                <!-- .portfolio-item -->
+            </div>
+            <div class="col-md-6">
+                <a class="portfolio-item" href="#">
+                    <div class="portfolio-thumb">
+                        <img src="img/portfolio-3.jpg" alt="">
+                    </div>
+
+                    <div class="portfolio-info">
+                        <h3>Management methodology</h3>
+                        <small>domain.com</small>
+                    </div>
+                    <!-- portfolio-info -->
+                </a>
+                <!-- .portfolio-item -->
+            </div>
+            <div class="col-md-6">
+                <a class="portfolio-item" href="#">
+                    <div class="portfolio-thumb">
+                        <img src="img/portfolio-4.jpg" alt="">
+                    </div>
+
+                    <div class="portfolio-info">
+                        <h3>Market research</h3>
+                        <small>domain.com</small>
+                    </div>
+                    <!-- portfolio-info -->
+                </a>
+                <!-- .portfolio-item -->
+            </div>
+
+        </div>
+        <!-- /.row -->
+    </div>
+</section>
+
+<section class="section-wrapper portfolio-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2>Portfolio</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a class="portfolio-item" href="https://smak06.github.io/SMG/">
+                    <div class="portfolio-thumb">
+                        <img src="img/portfolio-1.png" alt="">
+                    </div>
+
+                    <div class="portfolio-info">
+                        <center><h2 class="img-text" style="color:white;">SMG</h2></center>
+                    </div>
+                    <!-- portfolio-info -->
+                </a>
+                <!-- .portfolio-item -->
+            </div>
+            <div class="col-md-6">
+                <a class="portfolio-item" href="#">
+                    <div class="portfolio-thumb">
+                        <img src="img/portfolio-2.png" alt="">
+                    </div>
+
+                    <div class="portfolio-info">
+                        <h3>Customer focused</h3>
+                        <small>domain.com</small>
+                    </div>
+                    <!-- portfolio-info -->
+                </a>
+                <!-- .portfolio-item -->
+            </div>
+            <div class="col-md-6">
+                <a class="portfolio-item" href="#">
+                    <div class="portfolio-thumb">
+                        <img src="img/portfolio-3.jpg" alt="">
+                    </div>
+
+                    <div class="portfolio-info">
+                        <h3>Management methodology</h3>
+                        <small>domain.com</small>
+                    </div>
+                    <!-- portfolio-info -->
+                </a>
+                <!-- .portfolio-item -->
+            </div>
+            <div class="col-md-6">
+                <a class="portfolio-item" href="#">
+                    <div class="portfolio-thumb">
+                        <img src="img/portfolio-4.jpg" alt="">
+                    </div>
+
+                    <div class="portfolio-info">
+                        <h3>Market research</h3>
+                        <small>domain.com</small>
+                    </div>
+                    <!-- portfolio-info -->
+                </a>
+                <!-- .portfolio-item -->
+            </div>
+
+        </div>
+        <!-- /.row -->
+    </div>
+</section>
+
+<section class="expertise-wrapper section-wrapper gray-bg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2>Technical Skills</h2>
+                </div>
+            </div>
+        </div>
+        <!-- .row -->
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="expertise-item">
+                    <h3>Front-End</h3>
+
+                    <p>
+                        HTML/CSS(Bootstrap), JavaScript
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="expertise-item">
+                    <h3>Programming </h3>
+
+                    <p>
+                        C/C++, Java, Python, Solidity
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- .row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="expertise-item">
+                    <h3>Designing</h3>
+
+                    <p>
+                        Adobe Photoshop, Lightroom, Illutrator, After Effects, Premiere Pro
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="expertise-item">
+                    <h3>Additional</h3>
+
+                    <p>
+                        GitHub, GitLab</p>
+                </div>
+            </div>
+        </div>
+        <!-- .row -->
+    </div>
+    <!--.container-fluid-->
+</section>
+<!-- .expertise-wrapper -->
+
+<section class="section-wrapper skills-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2>Skills</h2>
+                </div>
+            </div>
+        </div>
+        <!--.row-->
+        <div class="row">
+            <div class="col-md-12">
+              <ul>
+                <li class="skill-item"><p>Leadership</p></li>
+                <li class="skill-item"><p>Proficient in English/Communication</p></li>
+                <li class="skill-item"><p>Efficient Desicion Making</p></li>
+                <li class="skill-item"><p>Quick Learner</p></li>
+              </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- .container-fluid -->
+</section>
+<!-- .skills-wrapper -->
+
+
+
+
+
+<section class="section-wrapper section-interest gray-bg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2>Interest</h2>
+                </div>
+            </div>
+        </div>
+        <!-- .row -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content-item">
+                    <h3>Blockchain</h3>
+
+                    <p>I've been interested in blockchain since crypto saw a sudden hype. Blockchain being a decentralized ledger has various applications expecially in the fintech domain and it is one of the most secure soutions to a lot of major problems that have always had a traditional solution so far. I've been studying blockchain focusing on Ethereum and solidity. </p>
+                </div>
+                <div class="content-item">
+                    <h3>Football</h3>
+
+                    <p>Currently I'm stuck between supporting my favorite team (Real Madrid) and following my favorite player (CR7). I've been in love with football since 2013. I love to watch it, I love to play it.</p>
+
+                </div>
+                <div class="content-item">
+                    <h3>Music</h3>
+
+                    <p>I love listening to music that I can relate to with my interests going as far back as the early 20th century. From the captivating blues by Sinatra and Jazzy melody by Coltrane to the indie beats by Muse, switch to Queen and back to Imagine Dragons.</p>
+                </div>
+                <div class="content-item">
+                    <h3>Photography</h3>
+
+                    <p>I have a big interest in simple things and I like making them look beautiful through a lens. And that lens more often than not is of my mobile than a professional camera.</p>
+                </div>
+            </div>
+        </div>
+        <!-- .row -->
+
+    </div>
+</section>
+<!-- .section-publications -->
+
+
+<!-- .portfolio -->
+
+<section class="section-contact section-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2>Contact</h2>
+                </div>
+            </div>
+        </div>
+        <!--.row-->
+        <div class="row">
+            <div class="col-md-12">
+                <address>
+                    <strong>Address</strong><br>
+                    New Delhi<br>
+                    India, 110092
+                </address>
+                <!-- <address>
+                    <strong>Phone Number</strong><br>
+                    +61 3 8376 6284
+                </address> -->
+
+                <address>
+                    <strong>Mobile Number</strong><br>
+                    +91 - 95826 37579
+                </address>
+                <address>
+                    <strong>Email</strong><br>
+                    <a href="mailto:#">makwane.work@gmail.com</a>
+                </address>
+            </div>
+        </div>
+        <!--.row-->
+    </div>
+    <!--.container-fluid-->
+</section>
+<!--.section-contact-->
+
+<footer class="footer gray-bg">
+    <div class="copyright-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- <div class="copytext">&copy; 2015 Online CV. All rights reserved | Design By: <a
+                            href="https://themehippo.com">ThemeHippo</a></div> -->
+                            Sahil Makwane, 2019
+                </div>
+            </div>
+            <!--.row-->
+        </div>
+        <!-- .container-fluid -->
+    </div>
+    <!-- .copyright-section -->
+</footer>
+<!-- .footer -->
+</div>
+<!-- .right-col-block -->
+</div>
+<!-- .columns-block -->
+</div>
+<!-- #main-wrapper -->
+
+<!-- jquery -->
+<script src="js/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
