@@ -5,6 +5,8 @@ This website is subject to a lot of changes. A LOT. So, bear with me whilst I de
 
 One of the major blogs for the website describing the 3 Continent program is up and running but again is not fully complete as my program hasn't even reached the half way. Although, I have addressed most of the major things that I believe are important. 
 
+Update, 21 May 2019: The Blog stands complete featuring only the London portion of the program. And as promised, the website is live before CyberPunk 2077, lol. It is still unfinished but it's better to have something live than nothing at all. 
+
 # The 3C Guide I Wish I had 
 https://smak06.github.io/Portfolio/blog.html
 
