@@ -1,5 +1,16 @@
+:root {
+	--body-color: #fff;
+}
 body{
-  background-color: #fff;
+  background-color: var(--body-color);
+}
+@media (prefers-color:scheme: dark) {
+	:root {
+		--body-color:#fff;
+	}
+	body {
+		background-color: black;
+	}
 }
 .Header{
   background: url(../img/head.jpg);
